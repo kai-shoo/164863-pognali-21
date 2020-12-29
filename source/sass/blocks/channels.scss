@@ -1,0 +1,40 @@
+.channels__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+  background-color: $big-stone-alt;
+
+  fill: $basic-yellow;
+}
+
+.channels__link {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 16px;
+  align-items: center;
+
+  color: $big-stone;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: $big-stone-alt;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.channels__link:hover .channels__icon,
+.channels__link:focus .channels__icon {
+  fill: $special-yellow;
+  background-color: $big-stone;
+}

@@ -1,0 +1,46 @@
+.main-nav {
+  @include listStyleReset;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 30px;
+  font-weight: 500;
+  color: $big-stone;
+  text-transform: uppercase;
+}
+
+.main-nav__item {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 0 20px;
+
+  color: $big-stone;
+
+  transition: transform 0.25s;
+
+  &:hover[href],
+  &:focus[href] {
+    transform: translateY(-100%);
+  }
+
+  &:hover[href]::before,
+  &:focus[href]::before {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: attr(data-hover);
+    position: absolute;
+    top: 100%;
+  }
+}
