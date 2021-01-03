@@ -1,4 +1,6 @@
 .overview {
+  position: relative;
+
   display: flex;
   flex-direction: column;
 
@@ -9,17 +11,15 @@
   color: $basic-blue;
 
   margin-top: -70px;
+  margin-left: 25px;
+  margin-right: 25px;
 
   @media (min-width: $tablet) {
     position: relative;
-  }
 
-  &::before {
-    @media (min-width: $tablet) {
-      content: url("../img/traveller-tablet.png");
-      position: absolute;
-      top: 0;
-    }
+    margin-top: -140px;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 }
 
@@ -31,6 +31,13 @@
   text-align: center;
 
   background-color: $basic-blue;
+
+  @media (min-width: $tablet) {
+    padding-top: 25px;
+    padding-bottom: 16px;
+
+    background-color: $big-stone-light;
+  }
 }
 
 .overview__action-nav {
@@ -69,15 +76,15 @@
     @media (min-width: $tablet) {
       width: 372px;
       height: 451px;
+
+      left: 37%;
+      top: 21px;
     }
   }
 }
 
 .overview__quote {
-  display: flex;
-  align-items: center;
   height: 285px;
-  width: 100%;
   margin-top: -40px;
   padding-left: 50px;
 
@@ -85,5 +92,10 @@
 
   @media (min-width: $tablet) {
     position: absolute;
+
+    top: 33%;
+    left: 23px;
+
+    background-color: inherit;
   }
 }

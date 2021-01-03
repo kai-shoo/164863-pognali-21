@@ -9,8 +9,6 @@
 
   color: $white;
 
-  background-color: $basic-blue;
-
   @media (min-width: $tablet) {
     flex-direction: row-reverse;
     align-items: flex-start;
