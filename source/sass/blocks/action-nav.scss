@@ -1,0 +1,46 @@
+.action-nav {
+  display: flex;
+}
+
+.action-nav--header .action-nav__icon {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+  }
+}
+
+.action-nav__icon {
+  width: 40px;
+  height: 40px;
+
+  fill: $basic-blue;
+
+  &--call .circle {
+    fill: $special-orange;
+  }
+
+  &--mail .circle {
+    fill: $special-yellow-dark;
+  }
+
+  @media (min-width: $desktop) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.action-nav__login {
+  &--header {
+    min-height: 50px;
+    flex-basis: 100%;
+
+    @media (min-width: $desktop) {
+      flex-basis: auto;
+    }
+  }
+
+  &--maxwidth {
+    flex-grow: 1;
+  }
+}

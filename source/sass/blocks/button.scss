@@ -2,12 +2,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 5px 30px;
 
   font-weight: bold;
   font-size: 17px;
   color: $basic-blue;
+  text-transform: uppercase;
 
   background-color: $basic-yellow;
   border-radius: 25px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $special-yellow;
+  }
+
+  &:active {
+    color: rgba($basic-blue, 0.3);
+  }
 }

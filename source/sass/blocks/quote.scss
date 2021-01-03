@@ -1,0 +1,32 @@
+.quote {
+  margin: 0;
+  width: 165px;
+
+  @media (min-width: $tablet) {
+    width: 330px;
+  }
+}
+
+.quote__text {
+  display: none;
+  margin-left: 0;
+
+  font-weight: 300;
+  font-size: 28px;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.quote__author {
+  width: 161px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (min-width: $tablet) {
+    font-size: 21px;
+  }
+}

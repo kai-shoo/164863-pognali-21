@@ -1,0 +1,104 @@
+.steps {
+  display: grid;
+  margin-top: 0;
+
+  color: $basic-blue;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+
+  border-radius: 10px;
+  list-style: none;
+
+  counter-reset: item;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: calc(50% + 20px) 50%;
+
+    font-size: 24px;
+
+    border-radius: 20px;
+    overflow: hidden;
+  }
+}
+
+.steps__item {
+  display: flex;
+  justify-content: space-around;
+  min-height: 90px;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  margin-top: -10px;
+
+  @media (min-width: $tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    min-height: 140px;
+    margin-top: 0;
+    padding-left: 30px;
+    padding-top: 30px;
+
+    border-radius: 0;
+  }
+
+  &:nth-child(2n) {
+    @media (min-width: $tablet) {
+      transform: translateX(-20px);
+    }
+  }
+
+  &:nth-child(4n + 1) {
+    background-color: $special-orange;
+  }
+
+  &:nth-child(4n + 2) {
+    background-color: $special-orange-light;
+
+    @media (min-width: $tablet) {
+      border-top-left-radius: 20px;
+    }
+  }
+
+  &:nth-child(4n + 3) {
+    background-color: $special-yellow_dark;
+  }
+
+  &:nth-child(4n + 4) {
+    background-color: $basic-yellow;
+  }
+
+  &:last-child {
+    min-height: 80px;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    @media (min-width: $tablet) {
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+
+  &::after {
+    counter-increment: item;
+    content: counter(item);
+    margin-top: 21px;
+    margin-right: -16px;
+
+    color: white;
+  }
+}
+
+.steps__text {
+  width: 140px;
+  margin-left: -14px;
+  margin-top: 21px;
+
+  @media (min-width: $tablet) {
+    width: 211px;
+  }
+}

@@ -1,0 +1,89 @@
+.overview {
+  display: flex;
+  flex-direction: column;
+
+  color: white;
+}
+
+.overview__steps {
+  color: $basic-blue;
+
+  margin-top: -70px;
+
+  @media (min-width: $tablet) {
+    position: relative;
+  }
+
+  &::before {
+    @media (min-width: $tablet) {
+      content: url("../img/traveller-tablet.png");
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+.overview__title {
+  padding-bottom: 6px;
+  padding-top: 17px;
+  margin-bottom: 0;
+
+  text-align: center;
+
+  background-color: $basic-blue;
+}
+
+.overview__action-nav {
+  justify-content: stretch;
+  align-self: center;
+  width: Min(100%, 450px);
+
+  background-color: rgba(0, 0, 0, 0);
+
+  transform: translateY(-50%);
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.overview__wrapper {
+  position: relative;
+}
+
+.overview__image {
+  display: flex;
+
+  @media (min-width: $tablet) {
+    object-fit: cover;
+  }
+
+  &--traveller {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+
+    width: 192px;
+    height: 255px;
+
+    @media (min-width: $tablet) {
+      width: 372px;
+      height: 451px;
+    }
+  }
+}
+
+.overview__quote {
+  display: flex;
+  align-items: center;
+  height: 285px;
+  width: 100%;
+  margin-top: -40px;
+  padding-left: 50px;
+
+  background-color: $basic-blue;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+  }
+}

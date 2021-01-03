@@ -8,14 +8,28 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="page">
-    <header class="page-header container">
+    <header class="page-header page-header container">
       <a class="page-header__logo" href="#">
         <picture>
-          <img src="img/logo-mobile.svg" alt="Погнали?" />
+          <source
+            media="(min-width: 1440px)"
+            srcset="img/logo-desktop-white.png 1x"
+            srcset="img/logo-desktop-white@2x.png 2x"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="img/logo-tablet-white.png 1x"
+            srcset="img/logo-tablet-white@2x.png 2x"
+          />
+          <img
+            src="img/logo-mobile-white.png"
+            alt="Логотип Погнали"
+            srcset="img/logo-mobile-white@2x.png 2x"
+          />
         </picture>
       </a>
       <button
-        class="page-header__toggle page-header__toggle--active"
+        class="page-header__toggle page-header__toggle--inactive"
         type="button"
       ></button>
       <ul class="page-header__nav main-nav">
@@ -33,7 +47,21 @@
           </a>
         </li>
       </ul>
-      <a class="page-header__login button" href="#"> Авторизация </a>
+
+      <div class="page-header__action-nav action-nav action-nav--header">
+        <svg class="action-nav__icon action-nav__icon--call">
+          <use class="circle" xlink:href="img/sprite.svg#circle"></use>
+          <use xlink:href="img/sprite.svg#call"></use>
+        </svg>
+        <svg class="action-nav__icon action-nav__icon--mail">
+          <use class="circle" xlink:href="img/sprite.svg#circle"></use>
+          <use xlink:href="img/sprite.svg#mail-2"></use>
+        </svg>
+
+        <a class="action-nav__login action-nav__login--header button" href="#">
+          Авторизация
+        </a>
+      </div>
 
       <ul class="page-header__channels channels">
         <li>
@@ -41,11 +69,10 @@
             class="channels__link channels__link--phone"
             href="tel:+88005558628"
           >
-            <div class="channels__icon">
-              <svg width="20" height="20">
-                <use xlink:href="img/sprite.svg#telephone"></use>
-              </svg>
-            </div>
+            <svg class="channels__icon channels__icon--telephone">
+              <use class="circle" xlink:href="img/sprite.svg#circle"></use>
+              <use xlink:href="img/sprite.svg#telephone"></use>
+            </svg>
             <span>8 800 555-86-28</span>
           </a>
         </li>
@@ -54,11 +81,10 @@
             class="channels__link channels__link--mail"
             href="mailto:mail@htmlacademy.ru?subject=Вопрос о сервисе"
           >
-            <div class="channels__icon">
-              <svg width="25" height="24">
-                <use xlink:href="img/sprite.svg#mail"></use>
-              </svg>
-            </div>
+            <svg class="channels__icon channels__icon--mail">
+              <use class="circle" xlink:href="img/sprite.svg#circle"></use>
+              <use xlink:href="img/sprite.svg#mail"></use>
+            </svg>
             <span>mail@htmlacademy.ru</span>
           </a>
         </li>
@@ -66,28 +92,130 @@
       <ul class="page-header__social social">
         <li>
           <a class="social__item" href="#">
-            <svg width="11" height="21" aria-label="Фейсбук">
+            <svg
+              class="social__icon social__icon--fb"
+              width="11"
+              height="21"
+              aria-label="Фейсбук"
+            >
               <use xlink:href="img/sprite.svg#facebook"></use>
             </svg>
           </a>
         </li>
         <li>
           <a class="social__item" href="#" aria-label="Вконтакте">
-            <svg width="23" height="12">
+            <svg class="social__icon social__icon--vk" width="23" height="12">
               <use xlink:href="img/sprite.svg#vkontakte"></use>
             </svg>
           </a>
         </li>
         <li>
           <a class="social__item" href="#">
-            <svg width="18" height="18" aria-label="Инстаграм">
+            <svg
+              class="social__icon social__icon--ig"
+              width="18"
+              height="18"
+              aria-label="Инстаграм"
+            >
               <use xlink:href="img/sprite.svg#instagram"></use>
             </svg>
           </a>
         </li>
       </ul>
     </header>
-    <main>atata</main>
+    <main>
+      <div class="wrapper wrapper--bg-blue">
+        <section class="page__overview overview">
+          <h2 class="overview__title title">
+            В путешествие<br />с крутыми<br />попутчиками!
+          </h2>
+          <div class="overview__wrapper overview__wrapper--image">
+            <picture class="overview__image overview__image--globe">
+              <source
+                media="(min-width: 1440px)"
+                srcset="img/globe-desktop.jpg 1x"
+                srcset="img/globe-desktop@2x.jpg 2x"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/globe-tablet.jpg 1x"
+                srcset="img/globe-tablet@2x.jpg 2x"
+              />
+
+              <img
+                src="img/globe-mobile.jpg"
+                alt="шар земной"
+                srcset="img/globe-mobile@2x.jpg 2x"
+              />
+            </picture>
+            <picture class="overview__image overview__image--traveller">
+              <source
+                media="(min-width: 1440px)"
+                srcset="img/traveller-desktop.png 1x"
+                srcset="img/traveller-desktop@2x.png 2x"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/traveller-tablet.png 1x"
+                srcset="img/traveller-tablet@2x.png 2x"
+              />
+              <img
+                src="img/traveller-mobile.png"
+                alt="мужчина с чемоадном для путешествий"
+                srcset="img/traveller-mobile@2x.jpg 2x"
+              />
+            </picture>
+          </div>
+
+          <!-- не забудь сделать разные ховеры для шапки -->
+          <div
+            class="overview__action-nav action-nav action-nav--overview container"
+          >
+            <svg class="action-nav__icon action-nav__icon--call">
+              <use class="circle" xlink:href="img/sprite.svg#circle"></use>
+              <use xlink:href="img/sprite.svg#call"></use>
+            </svg>
+            <svg class="action-nav__icon action-nav__icon--mail">
+              <use class="circle" xlink:href="img/sprite.svg#circle"></use>
+              <use xlink:href="img/sprite.svg#mail-2"></use>
+            </svg>
+
+            <a
+              class="action-nav__login action-nav__login--maxwidth button"
+              href="#"
+            >
+              Авторизация
+            </a>
+          </div>
+
+          <figure class="overview__quote quote">
+            <blockquote class="quote__text">
+              «Лучшее&nbsp;приложение, что я видел в жизни!»
+            </blockquote>
+            <figcaption class="quote__author">
+              Мурат Эльтазин<br />главный редактор газеты «гаджетлайф»
+            </figcaption>
+          </figure>
+
+          <ol class="overview__steps steps container">
+            <li class="steps__item">
+              <span class="steps__text">Выберите направление</span>
+            </li>
+            <li class="steps__item">
+              <span class="steps__text">Изучите идеи путешественников</span>
+            </li>
+            <li class="steps__item">
+              <span class="steps__text"
+                >Находите тех, кто&nbsp;похож на вас</span
+              >
+            </li>
+            <li class="steps__item">
+              <span class="steps__text">Путешествуйте вместе!</span>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </main>
     <footer>
       <p>footer</p>
     </footer>

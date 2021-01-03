@@ -1,15 +1,17 @@
 .channels__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   width: 45px;
   height: 45px;
 
-  border-radius: 50%;
-  background-color: $big-stone-alt;
-
   fill: $basic-yellow;
+
+  @media (min-width: $tablet) {
+    width: 68px;
+    height: 68px;
+  }
+
+  .circle {
+    fill: $big-stone-alt;
+  }
 }
 
 .channels__link {
@@ -18,7 +20,7 @@
   column-gap: 16px;
   align-items: center;
 
-  color: $big-stone;
+  color: inherit;
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
@@ -31,10 +33,18 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: $tablet) {
+    font-size: 28px;
+    column-gap: 23px;
+  }
 }
 
 .channels__link:hover .channels__icon,
 .channels__link:focus .channels__icon {
   fill: $special-yellow;
-  background-color: $big-stone;
+
+  .circle {
+    fill: $big-stone;
+  }
 }

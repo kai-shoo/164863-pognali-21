@@ -5,9 +5,18 @@
   grid-auto-columns: max-content;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $tablet) {
+    justify-content: left;
+    column-gap: 35px;
+  }
 }
 
 .social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &:hover,
   &:focus {
     opacity: 0.6;
@@ -15,5 +24,24 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.social__icon {
+  @media (min-width: $tablet) {
+    &--vk {
+      width: 31px;
+      height: 16px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
+
+    &--ig {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
