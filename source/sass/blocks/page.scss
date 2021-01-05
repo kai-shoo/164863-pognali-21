@@ -20,11 +20,19 @@
 }
 
 .page__header {
+  @media (min-width: $desktop) {
+    z-index: 1;
+  }
+
   &--index {
     background-color: $basic-blue;
 
     @media (min-width: $tablet) {
       background-color: $big-stone-light;
+    }
+
+    @media (min-width: $tablet) {
+      background-color: $basic-blue;
     }
   }
 }

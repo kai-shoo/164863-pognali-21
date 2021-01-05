@@ -5,6 +5,14 @@
   flex-direction: column;
 
   color: white;
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 640px;
+  }
 }
 
 .overview__steps {
@@ -20,6 +28,12 @@
     margin-top: -140px;
     margin-left: 40px;
     margin-right: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: -50px;
+    margin-left: 60px;
+    margin-right: 60px;
   }
 }
 
@@ -37,6 +51,17 @@
     padding-bottom: 16px;
 
     background-color: $big-stone-light;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 74px;
+    margin-left: 127px;
+
+    background-color: transparent;
+
+    text-align: start;
+
+    z-index: 1;
   }
 }
 
@@ -56,6 +81,11 @@
 
 .overview__wrapper {
   position: relative;
+
+  @media (min-width: $desktop) {
+    background-color: $big-stone-light;
+    position: static;
+  }
 }
 
 .overview__image {
@@ -63,6 +93,20 @@
 
   @media (min-width: $tablet) {
     object-fit: cover;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+  }
+
+  &--globe {
+    @media (min-width: $desktop) {
+      top: -110px;
+      left: 0;
+
+      width: 1440px;
+      height: 750px;
+    }
   }
 
   &--traveller {
@@ -79,6 +123,13 @@
 
       left: 37%;
       top: 21px;
+    }
+
+    @media (min-width: $desktop) {
+      top: 0;
+      left: 42%;
+      width: 431px;
+      height: 640px;
     }
   }
 }
@@ -97,5 +148,16 @@
     left: 23px;
 
     background-color: inherit;
+  }
+
+  @media (min-width: $desktop) {
+    position: static;
+
+    padding-left: 5px;
+    margin-left: 0px;
+    margin-right: 21px;
+    margin-top: 84px;
+
+    z-index: 1;
   }
 }

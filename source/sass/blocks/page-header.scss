@@ -19,6 +19,8 @@
   @media (min-width: $desktop) {
     flex-direction: row;
     align-items: center;
+
+    height: 106px;
   }
 
   &--active {
