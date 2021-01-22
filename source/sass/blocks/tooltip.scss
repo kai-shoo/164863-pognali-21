@@ -1,0 +1,36 @@
+.tooltip {
+  &:hover {
+    &::before {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 50%;
+      bottom: -67px;
+      z-index: 1000;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 18px 25px;
+
+      color: $white;
+      font-size: 20px;
+      line-height: 20px;
+
+      border-image: url("../img/triangle.svg");
+      background-color: $blue-dark;
+      border-radius: 4px;
+
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -11px;
+      left: 50%;
+
+      border: 8px solid transparent;
+      border-bottom-color: #101d41;
+
+      transform: translateX(-50%);
+    }
+  }
+}

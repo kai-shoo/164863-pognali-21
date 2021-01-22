@@ -1,29 +1,33 @@
 .container {
-  padding-left: 25px;
-  padding-right: 25px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: $padding-mobile;
+  padding-right: $padding-mobile;
 
   @media (min-width: $tablet) {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
+
+    max-width: 768px;
   }
 
   @media (min-width: $desktop) {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
+
+    max-width: 1440px;
   }
 
-  &--self {
-    margin-left: 25px;
-    margin-right: 25px;
+  &--no-max-width {
+    max-width: unset;
+  }
 
+  &--outer {
     @media (min-width: $tablet) {
-      margin-left: 40px;
-      margin-right: 40px;
-    }
-
-    @media (min-width: $desktop) {
-      margin-left: 60px;
-      margin-right: 60px;
+      padding-left: 75px;
+      padding-right: 75px;
     }
   }
 }

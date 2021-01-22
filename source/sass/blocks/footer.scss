@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 38px;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-top: 20px;
+  }
+}
+
+.footer__social {
+  column-gap: 0;
+  padding: 0;
+  width: auto;
+  margin-bottom: 30px;
+
+  list-style: none;
+}
+
+.footer__image-wrapper {
+  margin-bottom: 19px;
+}
+
+.footer__copyright {
+  margin-bottom: 15px;
+  margin-top: 17px;
+}
+
+.footer__image-wrapper {
+  @media (min-width: $tablet) {
+    margin-top: 16px;
+  }
+}

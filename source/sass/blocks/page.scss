@@ -20,19 +20,107 @@
 }
 
 .page__header {
-  @media (min-width: $desktop) {
-    z-index: 1;
+  z-index: 1;
+}
+
+.page__about {
+  @include nullifyContainer;
+  @include selfContainer;
+
+  padding-top: 21px;
+  padding-bottom: 83px;
+
+  background: url(../img/about-mobile.png) no-repeat top center,
+    url("../img/square-bg.svg") no-repeat top left;
+
+  @media (min-width: $tablet) {
+    background: url(../img/about-tablet.png) no-repeat right 100px,
+      url("../img/square-bg.svg") no-repeat top left;
+
+    padding-top: 80px;
+    padding-bottom: 89px;
   }
 
-  &--index {
-    background-color: $basic-blue;
+  @media (min-width: $desktop) {
+    padding-top: 118px;
+    padding-bottom: 163px;
 
-    @media (min-width: $tablet) {
-      background-color: $big-stone-light;
-    }
+    background: url(../img/about-desktop.png) no-repeat bottom right 60px,
+      url("../img/square-bg.svg") no-repeat left 30px;
+  }
+}
 
-    @media (min-width: $tablet) {
-      background-color: $basic-blue;
-    }
+.page__directions {
+  padding-bottom: 34px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 150px;
+    padding-bottom: 130px;
+    padding-left: 34px;
+  }
+}
+
+.page__companions {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    padding-top: 100px;
+    padding-bottom: 88px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 59px;
+  }
+}
+
+.page__promo {
+  padding-top: 52px;
+  padding-bottom: 38px;
+
+  @media (min-width: $tablet) {
+    padding-top: 80px;
+    padding-bottom: 63px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 114px;
+    padding-bottom: 166px;
+  }
+}
+
+.page__feedback {
+  padding-top: 62px;
+  padding-bottom: 29px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 59px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 92px;
+    padding-bottom: 107px;
+  }
+}
+
+.page__title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  color: $white;
+  width: min-content;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
   }
 }

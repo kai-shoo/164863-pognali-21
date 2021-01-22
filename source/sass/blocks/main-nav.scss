@@ -21,14 +21,16 @@
     flex-direction: row;
     align-items: center;
 
+    font-weight: 500;
     font-size: 20px;
+    line-height: 20px;
 
     &::before {
       content: "";
       display: block;
       width: 44px;
       height: 2px;
-      margin-right: 30px;
+      margin-right: 50px;
 
       box-shadow: 8px 0 0 $white, -8px 0 0 $white;
       background-color: currentColor;
@@ -54,11 +56,6 @@
     transform: translateY(-100%);
   }
 
-  &:hover[href]::before,
-  &:focus[href]::before {
-    opacity: 0.7;
-  }
-
   &:active {
     opacity: 0.3;
   }
@@ -67,9 +64,14 @@
     content: attr(data-hover);
     position: absolute;
     top: 100%;
+    color: $basic-yellow;
   }
 
   @media (min-width: $tablet) {
     padding-left: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 15px;
   }
 }

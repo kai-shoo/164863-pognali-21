@@ -25,6 +25,29 @@
   &:active {
     opacity: 0.3;
   }
+
+  &--circle {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    background-color: $basic-yellow;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      background-color: $special_yellow_dark;
+    }
+
+    &:active .social__icon {
+      opacity: 0.3;
+    }
+
+    @media (min-width: $tablet) {
+      width: 62px;
+      height: 62px;
+    }
+  }
 }
 
 .social__icon {

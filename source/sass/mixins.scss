@@ -1,0 +1,29 @@
+@mixin nullifyContainer {
+  margin-left: -$padding-mobile;
+  margin-right: -$padding-mobile;
+
+  @media (min-width: $tablet) {
+    margin-left: -$padding-tablet;
+    margin-right: -$padding-tablet;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: -$padding-desktop;
+    margin-right: -$padding-desktop;
+  }
+}
+
+@mixin selfContainer {
+  padding-left: $padding-mobile;
+  padding-right: $padding-mobile;
+
+  @media (min-width: $tablet) {
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
+  }
+}

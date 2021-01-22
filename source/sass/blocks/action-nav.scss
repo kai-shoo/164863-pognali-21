@@ -35,6 +35,10 @@
     min-height: 50px;
     flex-basis: 100%;
 
+    @media (min-width: $tablet) {
+      flex-basis: auto;
+    }
+
     @media (min-width: $desktop) {
       flex-basis: auto;
     }

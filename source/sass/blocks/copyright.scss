@@ -1,0 +1,38 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  font-size: 16px;
+  line-height: 16px;
+  color: $special-grey;
+
+  @media (max-width: $mobile) {
+    border-top: 1px solid $grey-border-light;
+  }
+
+  @media (min-width: $tablet) {
+    width: 154px;
+    align-items: flex-start;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.copyright:active {
+  opacity: 0.3;
+}
+
+.copyright__text {
+  margin-right: 27px;
+
+  @media (min-width: $tablet) {
+    margin-right: 22px;
+  }
+}

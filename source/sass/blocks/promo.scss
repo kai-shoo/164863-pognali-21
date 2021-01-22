@@ -1,0 +1,227 @@
+.promo {
+  padding-left: 24px;
+
+  &::before {
+    content: url("../img/promo-bg.png");
+    position: absolute;
+    top: 37px;
+    right: 25px;
+  }
+
+  @media (min-width: $tablet) {
+    padding-left: 0px;
+
+    &::before {
+      content: "";
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 71px;
+    padding-right: 68px;
+  }
+}
+
+.promo__services {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+  margin-bottom: 28px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 16px;
+
+  list-style: none;
+
+  counter-reset: item;
+
+  @media (min-width: $tablet) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      width: 198px;
+      height: 140%;
+
+      border-radius: 20px;
+      background-color: $grey-bg;
+
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      content: url("../img/promo-bg.png");
+      position: absolute;
+      bottom: -58%;
+      right: 45px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &::after {
+      content: url("../img/promo-bg-desktop.png");
+      bottom: 0;
+      right: 4px;
+    }
+
+    &::before {
+      height: 150%;
+      width: 444px;
+      right: 118px;
+    }
+  }
+}
+.promo__services-text {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 15px;
+
+  border-top: 1px solid $grey-border;
+
+  &:last-child {
+    border-bottom: 1px solid $grey-border;
+  }
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    flex-grow: 1;
+    padding-top: 16px;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 28px;
+    color: $special-grey;
+  }
+}
+
+.promo__services-item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &::after {
+    counter-increment: item;
+    content: counter(item);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    margin-top: 0;
+
+    border-radius: 50%;
+    background-color: $special-orange;
+
+    color: $white;
+    font-weight: normal;
+  }
+
+  &:nth-child(n + 2)::after {
+    background-color: $special_yellow_dark;
+  }
+
+  &:nth-child(n + 3)::after {
+    background-color: $basic-yellow;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet) {
+    justify-content: flex-start;
+
+    &::after {
+      order: -1;
+
+      width: 68px;
+      height: 68px;
+      margin-right: 22px;
+
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+}
+
+.promo__title {
+  width: 107px;
+  margin-bottom: 43px;
+  line-height: 24px;
+
+  @media (min-width: $tablet) {
+    width: auto;
+    margin-left: 103px;
+    margin-bottom: 87px;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 147px;
+  }
+}
+
+.promo__button {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  color: $blue-link;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      content: url("../img/icon-businessman.svg");
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 68px;
+      height: 68px;
+      margin-right: 21px;
+
+      border-radius: 50%;
+      background-color: $grey-bg;
+    }
+  }
+}
+
+.promo__service {
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet) {
+    flex-grow: 1;
+  }
+}
+
+.promo__price {
+  @media (min-width: $tablet) {
+    padding-right: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 242px;
+  }
+}

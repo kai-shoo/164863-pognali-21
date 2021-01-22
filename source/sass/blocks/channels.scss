@@ -9,6 +9,11 @@
     height: 68px;
   }
 
+  @media (min-width: $desktop) {
+    width: 90px;
+    height: 90px;
+  }
+
   .circle {
     fill: $big-stone-alt;
   }
@@ -38,6 +43,23 @@
     font-size: 28px;
     column-gap: 23px;
   }
+
+  @media (min-width: $desktop) {
+    column-gap: 31px;
+  }
+
+  &--yellow {
+    color: $basic-yellow;
+
+    &:hover,
+    &:focus {
+      color: $special_yellow_dark;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .channels__link:hover .channels__icon,
@@ -46,5 +68,14 @@
 
   .circle {
     fill: $big-stone;
+  }
+}
+
+.channels__link--yellow:hover .channels__icon,
+.channels__link--yellow:focus .channels__icon {
+  fill: $special_yellow_dark;
+
+  .circle {
+    fill: $big-stone-alt;
   }
 }

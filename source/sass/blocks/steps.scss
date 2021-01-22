@@ -23,8 +23,8 @@
   }
 
   @media (min-width: $desktop) {
-    grid-template-columns: 345px 345px 345px 315px;
-    width: 375px * 4;
+    grid-template-columns: 345px 345px 345px 285px;
+    // width: 375px * 4;
   }
 }
 
@@ -51,6 +51,8 @@
   }
 
   @media (min-width: $desktop) {
+    position: relative;
+
     align-items: center;
     flex-direction: row;
     margin-left: -30px;
@@ -110,6 +112,12 @@
     @media (min-width: $desktop) {
       border-radius: 20px;
     }
+
+    &::after {
+      @media (min-width: $desktop) {
+        right: 50px;
+      }
+    }
   }
 
   &::after {
@@ -128,15 +136,12 @@
     }
 
     @media (min-width: $desktop) {
+      position: absolute;
+
       margin-top: -26px;
       padding-left: 52px;
-    }
-  }
 
-  &:first-child,
-  &:last-child {
-    &::after {
-      padding-left: 22px;
+      right: 78px;
     }
   }
 }

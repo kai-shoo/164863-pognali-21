@@ -1,0 +1,115 @@
+.address__text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+
+  width: 143px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: $basic-blue-light;
+
+  &::before {
+    content: url("../img/icon-map-mark.svg");
+    width: 41px;
+    height: 41px;
+    margin-right: 16px;
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    width: auto;
+    margin-left: 35px;
+    margin-bottom: 45px;
+
+    font-size: 28px;
+    line-height: 28px;
+
+    &::before {
+      content: "";
+      width: 68px;
+      height: 68px;
+      margin-right: 26px;
+
+      background: no-repeat url("../img/icon-map-mark.svg");
+      background-size: 68px 68px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-right: 147px;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      background-size: 90px 90px;
+    }
+  }
+}
+
+.address__button {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: 18px;
+  line-height: 18px;
+
+  @media (min-width: $tablet) {
+    width: 618px;
+    padding-left: 35px;
+    padding-right: 27px;
+    padding-top: 3px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    margin-right: 76px;
+    width: 324px;
+  }
+}
+
+.address__content {
+  padding-top: 14px;
+  padding-bottom: 4px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 29px;
+    padding-top: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding-top: 57px;
+    padding-bottom: 0;
+  }
+}
+
+.address__map {
+  height: 424px;
+
+  background: no-repeat url("../img/map-fallback.png") top center;
+
+  @media (min-width: $tablet) {
+    height: 581px;
+
+    background-image: url("../img/map-fallback-tablet.png");
+  }
+
+  @media (min-width: $desktop) {
+    height: 584px;
+
+    background-image: url("../img/map-fallback-desktop.png");
+  }
+}

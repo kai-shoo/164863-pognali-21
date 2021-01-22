@@ -1,0 +1,116 @@
+.directions {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    background: no-repeat url("../img/flags-back.png") top 75px right;
+  }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, max-content);
+    column-gap: 100px;
+  }
+}
+
+.directions__text {
+  margin-top: 0;
+  margin-bottom: 60px;
+  margin-left: 25px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: $special-grey;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 106px;
+    margin-left: 35px;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+.directions__title {
+  margin-bottom: 13px;
+  margin-top: 61px;
+  margin-left: 25px;
+
+  @media (min-width: $tablet) {
+    margin-left: 33px;
+    margin-top: 57px;
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+}
+
+.directions__button {
+  order: 1;
+
+  padding-left: 25px;
+  padding-right: 20px;
+
+  @media (min-width: $tablet) {
+    margin-left: 36px;
+    margin-right: 36px;
+    padding-left: 31px;
+    padding-right: 27px;
+
+    max-width: 618px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 275px;
+  }
+}
+
+.directions__wrapper {
+}
+
+.directions__countries {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet) {
+    padding-left: 36px;
+    padding-right: 36px;
+
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 632px;
+    margin-top: 13px;
+    margin-bottom: 0;
+    grid-row-start: 1;
+    grid-row-end: -1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      z-index: 2;
+
+      height: 80px;
+      width: 560px;
+
+      background: linear-gradient(to top, $whisper, transparent);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+  }
+}

@@ -12,16 +12,67 @@
   background-color: $basic-yellow;
   border-radius: 25px;
 
+  cursor: pointer;
+
   @media (min-width: $tablet) {
     font-size: 20px;
   }
 
   &:hover,
   &:focus {
-    background-color: $special-yellow;
+    background-color: $special_yellow_dark;
   }
 
   &:active {
     color: rgba($basic-blue, 0.3);
+  }
+
+  &--icon-arrow {
+    justify-content: space-between;
+
+    min-height: 62px;
+    width: 100%;
+
+    color: $basic-blue-light;
+    text-transform: none;
+
+    border-radius: 10px;
+
+    &:active {
+      & > * {
+        opacity: 0.3;
+      }
+
+      &::after {
+        opacity: 0.3;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      min-height: 80px;
+      border-radius: 20px;
+
+      font-size: 24px;
+    }
+
+    &::after {
+      content: url("../img/triangle.svg");
+      margin-right: 5px;
+    }
+  }
+
+  &--transparent {
+    background-color: transparent;
+    border: 3px solid $big-stone;
+
+    &:hover,
+    &:focus {
+      background-color: $big-stone;
+      color: $white;
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
+    }
   }
 }

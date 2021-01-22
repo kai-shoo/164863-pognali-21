@@ -23,11 +23,9 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(gulp.dest("build/css"))
     .pipe(postcss([autoprefixer(), csso()]))
-    .pipe(rename("style.css"))
-    .pipe(sourcemap.write("."))
     .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 };
@@ -135,6 +133,7 @@ const server = (done) => {
     cors: true,
     notify: false,
     ui: false,
+    injectChanges: true,
   });
   done();
 };
@@ -153,7 +152,7 @@ exports.reload = reload;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series(styles, reload));
+  gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
 };

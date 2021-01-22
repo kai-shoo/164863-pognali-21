@@ -1,3 +1,26 @@
+.page-header--inactive {
+  height: 73px;
+
+  .page-header__action-nav,
+  .page-header__social,
+  .page-header__nav,
+  .page-header__channels {
+    display: none;
+  }
+
+  @media (min-width: $tablet) {
+    .page-header__action-nav {
+      display: flex;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    .page-header__nav {
+      display: flex;
+    }
+  }
+}
+
 .page-header {
   position: relative;
   overflow: hidden;
@@ -5,7 +28,6 @@
   display: flex;
   flex-wrap: wrap;
   padding-top: 20px;
-  height: 73px;
 
   color: $white;
 
@@ -24,18 +46,39 @@
   }
 
   &--active {
-    position: absolute;
+    @media (max-width: $desktop - 1) {
+      position: static;
 
-    background-color: $white;
+      height: auto;
+      padding-top: 22px;
+      padding-bottom: 4px;
 
-    @media (min-width: $tablet) {
-      flex-direction: row-reverse;
-      align-items: flex-start;
-      padding-top: 44px;
+      color: $basic-blue;
+
+      background-color: $white;
+
+      @media (min-width: $tablet) and (max-width: $desktop) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        padding-top: 44px;
+        padding-bottom: 55px;
+      }
     }
   }
 
   &--scrolled {
+    position: fixed;
+    color: $basic-blue;
+    background-color: $white;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &--no-js {
@@ -54,13 +97,17 @@
 .page-header__logo {
   position: relative;
 
+  width: 100px;
+  height: 15px;
   display: block;
-  margin-bottom: 70px;
 
   @media (min-width: $tablet) {
-    margin-right: auto;
+    width: 164px;
+    height: 42px;
+
     flex-basis: auto;
     margin-bottom: 88px;
+    margin-right: auto;
   }
 
   @media (min-width: $desktop) {
@@ -69,29 +116,28 @@
   }
 }
 
-.page-header--no-js .page-header__logo {
-  opacity: 1;
+.page-header--active .page-header__logo,
+.page-header--scrolled .page-header__logo {
+  @media (max-width: $desktop - 1) {
+    opacity: 1;
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
 
-    width: 100%;
-    height: 100%;
+      width: 100%;
+      height: 100%;
 
-    background-image: url("../img/logo-mobile-dark.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+      background-image: url("../img/logo-mobile-dark.png");
+      background-repeat: no-repeat;
+      background-size: contain;
 
-    @media (min-width: $tablet) {
-      background-image: url("../img/logo-tablet-dark.png");
+      @media (min-width: $tablet) {
+        background-image: url("../img/logo-tablet-dark.png");
+      }
     }
   }
-}
-
-.page-header--inactive .page-header__logo {
-  margin-bottom: 0;
 }
 
 .page-header--no-js .page-header__toggle {
@@ -116,6 +162,8 @@
     position: absolute;
     left: 50%;
 
+    margin-top: 5px;
+
     transform: translate(-50%, 50%);
   }
 
@@ -123,33 +171,35 @@
     display: none;
   }
 
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 25px;
+    height: 3px;
+
+    background-color: $white;
+    border-radius: 1.5px;
+    box-shadow: 0 -8px 0 $white;
+  }
+
   &--no-js {
     display: none;
   }
 
-  &--inactive {
-    width: 25px;
-    height: 15px;
+  width: 25px;
+  height: 15px;
+}
 
+.page-header--active .page-header__toggle {
+  @media (max-width: $desktop - 1) {
     &::before {
       content: "";
       position: absolute;
       left: 0;
       bottom: 0;
-
-      width: 25px;
-      height: 3px;
-
-      background-color: $white;
-      border-radius: 1.5px;
-      box-shadow: 0 -8px 0 $white;
-    }
-  }
-  &--active {
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
 
       width: 24px;
       height: 2px;
@@ -164,6 +214,7 @@
       content: "";
       position: absolute;
       left: 0;
+      bottom: 0;
 
       width: 24px;
       height: 2px;
@@ -175,7 +226,7 @@
     }
 
     @media (min-width: $tablet) {
-      margin-top: 21px;
+      margin-top: 0;
     }
   }
 }
@@ -185,7 +236,7 @@
   margin-bottom: 35px;
 
   @media (min-width: $tablet) {
-    flex-basis: content;
+    flex-basis: auto;
     order: -1;
     margin-top: -4px;
   }
@@ -201,17 +252,19 @@
 
 .page-header__nav {
   flex-basis: 100%;
-  margin-top: 0;
+  margin-top: 78px;
   margin-bottom: 54px;
 
   @media (min-width: $tablet) {
     margin-left: 57px;
     margin-bottom: 105px;
+    margin-top: 7px;
   }
 
   @media (min-width: $desktop) {
     flex-basis: auto;
     margin-bottom: 0;
+    margin-left: 87px;
   }
 }
 
