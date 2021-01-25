@@ -1,0 +1,22 @@
+.avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: scale-down;
+
+  clip-path: circle(50px at 50% 50%);
+
+  @media (min-width: $tablet) {
+    width: 94px;
+    height: 94px;
+
+    clip-path: none;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  @media (min-width: $desktop) {
+    border-radius: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+}

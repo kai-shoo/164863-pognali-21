@@ -1,0 +1,27 @@
+.outline-block {
+  position: relative;
+
+  border: 1px solid $grey-outline;
+  border-radius: 10px;
+}
+
+.outline-block__title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  margin: 0;
+  padding: 0 15px;
+
+  background-color: $whisper;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet) {
+    top: unset;
+    bottom: 0;
+
+    padding: 0 20px;
+
+    transform: translate(-50%, 50%);
+  }
+}

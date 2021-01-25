@@ -29,5 +29,25 @@
       padding-left: 75px;
       padding-right: 75px;
     }
+
+    @media (min-width: $desktop) {
+      padding-left: 125px;
+      padding-right: 60px;
+    }
+  }
+
+  &--inner {
+    padding-left: 26px;
+    padding-right: 26px;
+
+    @media (min-width: $tablet) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: 95px;
+      padding-right: 40px;
+    }
   }
 }

@@ -11,7 +11,7 @@
 
 <body class="page">
 
-  <header class="wrapper wrapper--header-index">
+  <header class="wrapper wrapper--header">
     <div class="wrapper--header-inactive  ">
       <div class="page-header page__header page-header--no-js container">
         <a class="page-header__logo" href="#">
@@ -108,12 +108,130 @@
   </header>
 
   <main>
-    <div class="wrapper wrapper--title">
+    <div class="wrapper wrapper--title wrapper--has-rounded-small">
       <div class="container container--outer">
-        <h2 class="page__title">Направления</h2>
+        <h1 class="page__title">Направления</h1>
       </div>
     </div>
 
+
+    <form method="POST" action="https://echo.htmlacademy.ru">
+      <div class="container container--outer">
+        <section class="profile-control ">
+          <h2 class="visually-hidden">Управление профилем</h2>
+
+          <div class="level-circle profile-control__level-circle">
+            <svg class="level-circle__circle" width="60" height="60" viewBox="0 0 60 60" data-level="99">
+              <circle r="28" cx="30" cy="30" fill="transparent" stroke="#ff8d30" stroke-width="3"
+                stroke-dasharray="150px 100px"></circle>
+            </svg>
+            <span class="level-circle__level-number">80</span>
+            <span class="level-circle__level-text">level</span>
+          </div>
+
+          <div class="avatar profile-control__avatar">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/avatar-user557-desktop.jpg 1x"
+                srcset="img/avatar-user557-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/avatar-user557-tablet.jpg 1x"
+                srcset="img/avatar-user557-tablet@2x.jpg 2x">
+              <img src="img/avatar-user557.jpg" alt="мужчина с бородой в зимней одежде и в тёмных очках"
+                srcset="img/avatar-user557@2x.jpg 2x">
+            </picture>
+          </div>
+
+          <a class="button button--grey button--oval profile-control__button"><span
+              class="profile-control__button-hide">Сменить</span>&nbsp;фото</a>
+
+
+          <div class="profile-control__tags outline-block">
+            <h3
+              class="profile-control__tags-title title title--outline-block outline-block__title outline-block__title--tags">
+              Тэги</h3>
+            <p class="profile-control__tags-text">#бургер #бар #футбол #концерт #крафт</p>
+          </div>
+
+          <div class="transport profile-control__transport outline-block">
+            <h3 class="transport__title title title--outline-block outline-block__title">Транспорт</h3>
+            <ul class="transport__list">
+              <li class="transport__item tooltip" data-tooltip="Авиаперелет">
+                <label class="transport__wrapper">
+                  <input class="transport__input visually-hidden" type="checkbox" name="plane" checked>
+                  <svg class="transport__icon" width="15" height="15">
+                    <use xlink:href="img/sprite.svg#plane"></use>
+                  </svg>
+                </label>
+              </li>
+              <li class="transport__item tooltip" data-tooltip="Автотранспорт">
+                <label class="transport__wrapper">
+                  <input class="transport__input visually-hidden" type="checkbox" name="bus" checked>
+                  <svg class="transport__icon" width="17" height="17">
+                    <use xlink:href="img/sprite.svg#bus"></use>
+                  </svg>
+                </label>
+              </li>
+              <li class="transport__item tooltip " data-tooltip="Велосипед">
+                <label class="transport__wrapper">
+                  <input class="transport__input visually-hidden" type="checkbox" name="bicycle">
+                  <svg class="transport__icon" width="17" height="17">
+                    <use xlink:href="img/sprite.svg#bicycle"></use>
+                  </svg>
+                </label>
+              </li>
+              <li class="transport__item tooltip" data-tooltip="Пешком">
+                <label class="transport__wrapper">
+                  <input class="transport__input visually-hidden" type="checkbox" name="run" checked>
+                  <svg class="transport__icon" width="17" height="17">
+                    <use xlink:href="img/sprite.svg#run"></use>
+                  </svg>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <div class="wrapper wrapper-has-upper-rounded wrapper--has-top-rounded-form wrapper--grey-button">
+        <div class="container container--outer">
+          <section class="myplans">
+            <h2 class="myplans__title title title--form-blue">Мои планы:</h2>
+            <ol class="myplans__list">
+              <li class="container container--inner trip-card myplans__trip-item wrapper wrapper--inner">
+                <h3 class="trip-card__title">Франция, Италия</h3>
+                <p class="trip-card__companion">3 попутчика</p>
+                <p class="trip-card__dates">26 мар — 29 мар</p>
+                <a href="" class="trip-card__edit">Изменить</a>
+              </li>
+              <li class="container container--inner trip-card myplans__trip-item wrapper wrapper--inner">
+                <h3 class="trip-card__title">Таиланд, Индонезия</h3>
+                <p class="trip-card__companion">1 попутчик</p>
+                <p class="trip-card__dates">1 июл — 15 июл</p>
+                <a href="" class="trip-card__edit">Изменить</a>
+              </li>
+            </ol>
+
+          </section>
+        </div>
+      </div>
+
+      <div class="wrapper wrapper--grey-form wrapper--has-top-rounded-form">
+        <div class="container container--outer">
+          <div class="steps">
+            <h2 class="steps__title title--form-blue">Добавить план:</h2>
+            <section class="step-one wrapper wrapper--inner-step">
+              <div class="container container--inner step-one">
+                <h2 class="step-one__title title title--sub-step">Шаг 1.<br class="step-one__linebreak">Даты пребывания
+                </h2>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+    <div style="height: 500px;background-color: tomato;">
+    </div>
   </main>
   <footer class="wrapper wrapper--footer">
     <div class="container footer">
@@ -156,7 +274,6 @@
     </div>
   </footer>
   <script src="js/menu.js"></script>
-  <script src="js/icon_customImage.js"></script>
 
 </body>
 

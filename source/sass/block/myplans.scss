@@ -1,0 +1,29 @@
+.myplans {
+  padding-top: 24px;
+
+  @media (min-width: $tablet) {
+    padding-top: 52px;
+    padding-bottom: 65px;
+  }
+}
+
+.myplans__title {
+  margin: 0;
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 5px;
+  }
+}
+
+.myplans__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  counter-reset: trip;
+}

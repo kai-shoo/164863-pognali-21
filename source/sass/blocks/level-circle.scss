@@ -1,0 +1,67 @@
+.level-circle {
+  width: 100px;
+  height: 100px;
+
+  @media (min-width: $tablet) {
+    width: 94px;
+    height: 94px;
+  }
+
+  @media screen {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+.level-circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100px;
+  height: 100px;
+
+  color: $basic-blue;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 38px;
+
+  border-radius: 50%;
+
+  @media (min-width: $tablet) {
+    width: 94px;
+    height: 94px;
+  }
+}
+
+.level-circle__level-text {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+
+  color: $basic-blue;
+}
+
+.level-circle__circle {
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+  transform: rotate(-90deg);
+
+  @media (min-width: $desktop) {
+    color: $white;
+  }
+}
+
+.level-circle__level-number {
+  border-bottom: 1px solid rgba($special-grey, 0.3);
+  margin-bottom: 10px;
+
+  color: $basic-blue;
+
+  @media (min-width: $desktop) {
+    color: $white;
+  }
+}

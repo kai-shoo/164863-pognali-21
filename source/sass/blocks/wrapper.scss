@@ -11,6 +11,16 @@
     }
   }
 
+  &--has-rounded-small {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    @media (min-width: $tablet) {
+      border-bottom-left-radius: 55px;
+      border-bottom-right-radius: 55px;
+    }
+  }
+
   &--overlap {
     &::before {
       z-index: -1;
@@ -54,6 +64,16 @@
     }
   }
 
+  &--has-top-rounded-form {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    @media (min-width: $desktop) {
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+    }
+  }
+
   &--overview,
   &--header-index {
     background-color: $basic-blue;
@@ -69,8 +89,6 @@
 
   &--header,
   &--title {
-    position: relative;
-
     background-color: $big-stone-light;
 
     @media (min-width: $desktop) {
@@ -133,22 +151,52 @@
     background-color: $basic-yellow;
   }
 
-  &--footer {
-    margin-top: -132px;
+  &--grey-button {
+    background-color: $grey-button;
+  }
 
-    background-color: $white;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+  &--footer-index {
+    margin-top: -132px;
 
     @media (min-width: $tablet) {
       margin-top: -62px;
-
-      border-top-left-radius: 55px;
-      border-top-right-radius: 55px;
     }
 
     @media (min-width: $desktop) {
       margin-top: -134px;
     }
+  }
+
+  &--footer {
+    background-color: $white;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    @media (min-width: $tablet) {
+      border-top-left-radius: 55px;
+      border-top-right-radius: 55px;
+    }
+  }
+
+  &--inner {
+    border-radius: 10px;
+    background-color: $white;
+  }
+
+  &--inner-step {
+    border-radius: 10px;
+    background-color: $white;
+
+    @media (min-width: $tablet) {
+      border-radius: 30px;
+    }
+
+    @media (min-width: $desktop) {
+      border-radius: 60px;
+    }
+  }
+
+  &--grey-form {
+    background-color: $grey-form;
   }
 }

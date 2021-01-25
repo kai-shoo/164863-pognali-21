@@ -1,0 +1,165 @@
+.trip-card {
+  display: flex;
+  flex-direction: column;
+  padding-top: 22px;
+  padding-bottom: 23px;
+  margin-bottom: 10px;
+
+  color: $basic-blue-light;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding-top: 37px;
+    padding-bottom: 16px;
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 46% 165px 1fr min-content;
+    column-gap: 15px;
+    align-items: baseline;
+
+    margin-bottom: 15px;
+    padding-bottom: 38px;
+    padding-top: 34px;
+  }
+}
+
+.trip-card__title {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+  margin-bottom: 21px;
+  padding-left: 15px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+
+  @media (min-width: $tablet) {
+    flex-basis: 100%;
+    padding-left: 0;
+    margin-bottom: 55px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
+
+  &::before {
+    counter-increment: trip;
+    content: counter(trip) ".";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: $basic-blue-light;
+
+    @media (min-width: $tablet) {
+      left: unset;
+      top: unset;
+      bottom: 0;
+      right: -7px;
+
+      font-size: 20px;
+      line-height: 20px;
+    }
+    @media (min-width: $desktop) {
+      right: unset;
+      left: -50px;
+    }
+  }
+}
+
+.trip-card__companion {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    margin-right: auto;
+
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $desktop) {
+    letter-spacing: 0.1em;
+  }
+}
+
+.trip-card__dates {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    margin-right: 77px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+}
+
+.trip-card__edit {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $black;
+
+  opacity: 0.3;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: $black;
+  }
+
+  @media (min-width: $desktop) {
+    letter-spacing: 0.08em;
+    justify-self: right;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
