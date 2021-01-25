@@ -105,6 +105,8 @@
   margin-left: -$padding-mobile;
   margin-right: -$padding-mobile;
 
+  overflow-y: hidden;
+
   @media (min-width: $tablet) {
     margin-left: -$padding-tablet;
     margin-right: -$padding-tablet;
@@ -124,7 +126,7 @@
       bottom: 0;
       left: -201px;
 
-      height: auto;
+      height: 100%;
     }
   }
 

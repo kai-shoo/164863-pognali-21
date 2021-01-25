@@ -20,7 +20,13 @@
 }
 
 .page__header {
-  z-index: 1;
+  @media (min-width: $tablet) {
+    min-height: 132px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 132px;
+  }
 }
 
 .page__about {
