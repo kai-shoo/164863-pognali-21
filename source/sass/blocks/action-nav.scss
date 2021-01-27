@@ -16,12 +16,32 @@
 
   fill: $basic-blue;
 
-  &--call .circle {
-    fill: $special-orange;
+  &--call {
+    .circle {
+      fill: $special-orange;
+    }
+
+    &:hover {
+      .circle {
+        fill: $special-orange-dark;
+      }
+    }
   }
 
-  &--mail .circle {
-    fill: $special-yellow-dark;
+  &--mail {
+    .circle {
+      fill: $special-yellow-dark;
+    }
+
+    &:hover {
+      .circle {
+        fill: $special-orange;
+      }
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: $desktop) {

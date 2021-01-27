@@ -19,10 +19,14 @@
 
 .overview__steps-wrapper {
   background-color: $big-stone;
-  margin-left: -$padding-mobile;
-  margin-right: -$padding-mobile;
-  padding-left: $padding-mobile;
-  padding-right: $padding-mobile;
+
+  @media (max-width: $tablet - 1) {
+    display: flex;
+    justify-content: center;
+
+    margin-left: calc(-100vw / 2 + 270px / 2);
+    margin-right: calc(-100vw / 2 + 270px / 2);
+  }
 
   @media (min-width: $desktop) {
     margin-left: 0;
@@ -37,6 +41,10 @@
   margin-bottom: 40px;
 
   color: $basic-blue;
+
+  @media (max-width: $tablet - 1) {
+    width: 270px;
+  }
 
   @media (min-width: $tablet) {
     position: relative;

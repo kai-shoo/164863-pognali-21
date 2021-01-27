@@ -197,28 +197,11 @@
 }
 
 .user-card__transport {
-  &::before {
-    display: block;
-  }
+  display: block;
 
-  &--is-off::before {
+  fill: $basic-blue-light;
+  &--is-off {
     opacity: 0.15;
-  }
-
-  &--plane::before {
-    content: url("../img/icon-plane.svg");
-  }
-
-  &--bus::before {
-    content: url("../img/icon-bus.svg");
-  }
-
-  &--bicycle::before {
-    content: url("../img/icon-bicycle.svg");
-  }
-
-  &--run::before {
-    content: url("../img/icon-run.svg");
   }
 }
 

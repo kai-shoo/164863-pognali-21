@@ -109,14 +109,14 @@
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
     }
-  }
 
-  &:hover,
-  &:focus {
-    background-color: $grey-button-hover;
-  }
+    &:hover,
+    &:focus {
+      background-color: $grey-button-hover;
+    }
 
-  &:active {
-    color: rgba($basic-blue, 0.3);
+    &:active {
+      color: rgba($basic-blue, 0.3);
+    }
   }
 }
